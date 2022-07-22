@@ -18,9 +18,9 @@ const Navbar = () => {
     <nav>
       <Link style={style} to="/">Home</Link>
       <Link style={style}  to="/recipes">Recipes</Link>
-      <Link style={style} to="/RecipeForm">Add Recipes Form</Link>
-      <Link style={style} to="/"></Link>
-
+      <Link style={style} to="/recipes/new">Add Recipes Form</Link>
+      <Link style={style}  to="/restaurants">Recipes</Link>
+      <Link style={style} to="/restaurant/new">Add Recipes Form</Link>
     </nav>
   )
 }
