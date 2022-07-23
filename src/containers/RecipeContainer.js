@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RecipesContainer = () => {
+const RecipeContainer = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const RecipesContainer = () => {
   )
 }
 
-export default RecipesContainer
+export default RecipeContainer
