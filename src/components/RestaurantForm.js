@@ -7,6 +7,16 @@ const RestaurantForm = () => {
     slogan: "",
   })
 
+  const handleChange = (e) =>{
+    setRestaurant({
+      ...restaurant, 
+      [e.target.name]: e.target.value
+    })
+
+  }
+
+  
+
   return (
     <div>
       <h2>Add Restaurant Here</h2>
