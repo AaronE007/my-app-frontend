@@ -3,6 +3,9 @@ import React from 'react'
 const RestaurantForm = () => {
   const history = useHistory()
   const [restaurant, setRestaurant] = useState({
+    name: "",
+    slogan: "",
+  })
 
   return (
     <div>
