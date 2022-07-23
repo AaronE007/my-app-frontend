@@ -45,7 +45,7 @@ const RecipeForm = () => {
   return (
     <div>
     <h2>Add Menu Item Here</h2>
-    <form>
+    <form onSubmit={handleSubmit}>
         <label>Name</label>
         <input onChange={handleChange} type="text" name="name" value={meal.name} required/>
         <br/>
