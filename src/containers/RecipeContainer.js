@@ -1,19 +1,21 @@
 import React from 'react'
+import React, {useState, useEffect} from "react";
+
 
 const RecipeContainer = () => {
-  const [meals, setmeals] = useState([])
+  const [meals, setMeals] = useState([])
 
   useEffect(() => {
     fetch("Url")
       .then((r) => r.json())
-      .then(setRecipes);
+      .then(setMeals);
   }, []);
   
   
   
   return (
     <div>
-
+      <RecipeList meals={meals} />
       
     </div>
   )
