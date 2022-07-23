@@ -23,6 +23,11 @@ const RestaurantForm = () => {
       calories: restaurant.slogan,
     }
 
+    fetch("url", {
+      method: "Post",
+      headers: {
+        "Content_Type": "app"
+      },
 
   return (
     <div>
