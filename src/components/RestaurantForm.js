@@ -4,7 +4,7 @@ const RestaurantForm = () => {
   return (
     <div>
       <h2>Add Restaurant Here</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
           <label>Name</label>
           <input onChange={handleChange} type="text" name="name" value={restaurant.name} required/>
           <br/>
