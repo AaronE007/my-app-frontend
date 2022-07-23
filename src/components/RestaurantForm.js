@@ -20,7 +20,7 @@ const RestaurantForm = () => {
 
     const newRestaurant = {
       name: restaurant.name,
-      calories: restaurant.slogan,
+     slogan: restaurant.slogan,
     }
 
     fetch("url", {
@@ -28,6 +28,10 @@ const RestaurantForm = () => {
       headers: {
         "Content_Type": "app"
       },
+      body: JSON.stringify(newRestaurant)
+    })
+      .then(() => history.push("/restaurants"))
+  }
 
   return (
     <div>
