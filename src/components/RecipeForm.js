@@ -20,6 +20,26 @@ const RecipeForm = () => {
 
   }
   
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const newMeal = {
+      name: meal.name,
+      calories: meal.calories,
+      main_ingredient: meal.mainIngredient,
+      country_of_origin: meal.countryOfOrigin
+    }
+
+    fetch("url", {
+      method: "Post",
+      headers: {
+        "Content_Type": "app"
+      }
+    })
+
+  }
+
+
 
   return (
     <div>
