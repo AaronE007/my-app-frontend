@@ -15,6 +15,7 @@ const RecipeForm = () => {
   const handleChange = (e) =>{
     setMeal({
       ...meal, 
+      [e.target.name]: e.target.value
     })
 
   }
