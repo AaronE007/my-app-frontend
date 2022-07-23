@@ -4,7 +4,14 @@ import {useHistory} from "react-router-dom"
 import React from 'react'
 
 const RecipeForm = () => {
-  const [meal, setMeal] = useState()
+  const history = useHistory()
+  const [meal, setMeal] = useState({
+    name: "",
+    calories: "",
+    mainIngredient: "",
+    countryOfOrigin: ""
+  })
+  
 
   return (
     <div>
