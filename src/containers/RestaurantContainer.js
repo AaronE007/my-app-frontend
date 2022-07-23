@@ -15,8 +15,7 @@ const RestaurantContainer = () => {
   
   return (
     <div>
-      <RestaurantList restaurants={restaurants} />
-      
+      <RestaurantList restaurants={restaurants} />  
     </div>
   )
 }

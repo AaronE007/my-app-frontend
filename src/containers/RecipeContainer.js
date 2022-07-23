@@ -17,7 +17,6 @@ const RecipeContainer = () => {
   return (
     <div>
       <RecipeList meals={meals} />
-      
     </div>
   )
 }
