@@ -1,21 +1,26 @@
+import {useState} from "react"
+import {useHistory} from "react-router-dom"
+
 import React from 'react'
 
 const RecipeForm = () => {
+  const [meal, setMeal] = useState()
+
   return (
     <div>
     <h2>Add Menu Item Here</h2>
     <form>
         <label>Name</label>
-        <input onChange={handleChange} type="text" name="name" value={recipe.name} required/>
+        <input onChange={handleChange} type="text" name="name" value={meal.name} required/>
         <br/>
         <label>Calories</label>
-        <input onChange={handleChange} type="number" name="calories" value={recipe.calories} required/>
+        <input onChange={handleChange} type="number" name="calories" value={meal.calories} required/>
         <br/>
         <label>Main Ingredient</label>
-        <input onChange={handleChange} type="text" name="mainIngredient" value={recipe.mainIngredient} required/>
+        <input onChange={handleChange} type="text" name="mainIngredient" value={meal.mainIngredient} required/>
         <br/>
         <label>Country of Origin</label>
-        <input onChange={handleChange} type="text" name="countryOfOrigin" value={recipe.countryOfOrigin} required/>
+        <input onChange={handleChange} type="text" name="countryOfOrigin" value={meal.countryOfOrigin} required/>
     </form>
       
     </div>
