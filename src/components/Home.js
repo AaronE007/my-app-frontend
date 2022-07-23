@@ -1,11 +1,9 @@
 import React from 'react'
 
-const Home = () => {
+const Home = ({foodImage}) => {
   return (
     <div>
-      <div>
-        <p>"Hello"</p>
-      </div>
+      <img style={{width: "20%", magrin:"25px 50px 25px"}} src={foodImage} alt="Several delicious foods" />
     </div>
   )
 }

@@ -12,6 +12,9 @@ import RestaurantForm from './components/RestaurantForm'
 
 
 function App() {
+
+  const foodImage = window.location.origin + "/images/Food.jpeg"
+
   return (
     <div>
       <Router>
@@ -43,7 +46,7 @@ function App() {
           </Route>
 
           <Route path="/">
-            <Home/>
+            <Home foodImage={foodImage} />
           </Route>
 
         </Switch>

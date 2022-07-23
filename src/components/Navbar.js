@@ -9,7 +9,7 @@ const style = {
   color: "black",
   backgroundColor: "Gold",
   fontWeight: "600",
-  verticalAlign: "center"
+  verticalAlign: "center",
 }
 
 const Navbar = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
       <Link style={style} to="/">Home</Link>
       <Link style={style}  to="/recipes">Recipes</Link>
       <Link style={style} to="/recipes/new">Add Recipes Form</Link>
-      <Link style={style}  to="/restaurants">Recipes</Link>
+      <Link style={style}  to="/restaurants">Restaurants</Link>
       <Link style={style} to="/restaurant/new">Add Restaurant Card Form</Link>
     </nav>
   )
