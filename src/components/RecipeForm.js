@@ -49,12 +49,18 @@ const RecipeForm = () => {
         <label>Name</label>
         <input onChange={handleChange} type="text" name="name" value={meal.name} required/>
         <br/>
+        <br/>
+
         <label>Calories</label>
         <input onChange={handleChange} type="number" name="calories" value={meal.calories} required/>
         <br/>
+        <br/>
+
         <label>Main Ingredient</label>
         <input onChange={handleChange} type="text" name="mainIngredient" value={meal.mainIngredient} required/>
         <br/>
+        <br/>
+
         <label>Country of Origin</label>
         <input onChange={handleChange} type="text" name="countryOfOrigin" value={meal.countryOfOrigin} required/>
     </form>

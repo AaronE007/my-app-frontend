@@ -43,6 +43,7 @@ const RestaurantForm = () => {
           <label>Name</label>
           <input onChange={handleChange} type="text" name="name" value={restaurant.name} required/>
           <br/>
+          <br/>
           <label>Slogan</label>
           <input onChange={handleChange} type="text" name="slogan" value={restaurant.slogan} required/>
       </form>

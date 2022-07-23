@@ -3,7 +3,7 @@ import RecipeCard from './RecipeCard'
 
 const RecipeList = ({meals}) => {
 
-  const renderMeals = meals.map(meals => <RecipeCard key={meals.id} meal={meal}/>)
+  const renderMeals = meals.map(meal => <RecipeCard key={meals.id} meal={meal}/>)
   return (
     <div>
       {renderMeals}

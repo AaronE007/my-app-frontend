@@ -1,5 +1,5 @@
 import './App.css';
-import{BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import{BrowserRouter as  Route, Switch} from "react-router-dom"
 import Header from "./components/Header"
 import Home from "./components/Home"
 import Navbar from "./components/Navbar"
@@ -17,7 +17,6 @@ function App() {
 
   return (
     <div>
-      <Router>
         <Navbar />
         <Header title="Food Diary"/>
         <Switch>
@@ -50,7 +49,6 @@ function App() {
           </Route>
 
         </Switch>
-      </Router>
     </div>
   );
 }

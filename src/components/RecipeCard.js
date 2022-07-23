@@ -4,9 +4,13 @@ const RecipeCard = ({recipe}) => {
   return (
     <div>
       <h3>Name: {recipe.name}</h3>
+      <br/>
       <h4>Calories: {recipe.calories}</h4>
+      <br/>
       <h4>Main Ingredient: {recipe.main_ing}</h4>
+      <br/>
       <h4>Country of Origin: {recipe.country}</h4>
+      <br/>
       <h5>Eaten at: {recipe.restaurant.name}</h5>
     </div>
   )
