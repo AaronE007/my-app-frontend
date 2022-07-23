@@ -34,9 +34,10 @@ const RecipeForm = () => {
       method: "Post",
       headers: {
         "Content_Type": "app"
-      }
+      },
+        body: JSON.stringify(newMeal)
     })
-
+      .then(() => history.push("/meals"))
   }
 
 
