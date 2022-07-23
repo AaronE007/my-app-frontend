@@ -13,7 +13,10 @@ const RecipeForm = () => {
   })
 
   const handleChange = (e) =>{
-    
+    setMeal({
+      ...meal, 
+    })
+
   }
   
 
