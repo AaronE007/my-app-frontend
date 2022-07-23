@@ -18,9 +18,10 @@ const RestaurantForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    const newMeal = {
-      name: meal.name,
-      calories: meal.calories,
+    const newRestaurant = {
+      name: restaurant.name,
+      calories: restaurant.slogan,
+    }
 
 
   return (
