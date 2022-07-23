@@ -15,7 +15,9 @@ const RestaurantForm = () => {
 
   }
 
-  
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
 
   return (
     <div>
