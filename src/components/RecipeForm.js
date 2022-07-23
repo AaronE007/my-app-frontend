@@ -11,6 +11,10 @@ const RecipeForm = () => {
     mainIngredient: "",
     countryOfOrigin: ""
   })
+
+  const handleChange = (e) =>{
+    
+  }
   
 
   return (
