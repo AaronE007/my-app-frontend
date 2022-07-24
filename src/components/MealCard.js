@@ -1,11 +1,14 @@
 import React from 'react'
 
-const MealCard = ({meal, onDeleteClick}) => {
+const MealCard = ({meal, onDeleteClick, onUpdateClick}) => {
 
   function handleDeleteClick() {
     onDeleteClick(id);
   }
 
+  function handleUpdateClick() {
+    onUpdateClick(id);
+  }
 
   return (
     <div style={{margin: "auto", border: "solid", backgroundColor: "blue", height: 800, width: 800, color: "gold"}}>
@@ -20,6 +23,8 @@ const MealCard = ({meal, onDeleteClick}) => {
       <h5>Eaten at: {meal.restaurant.name}</h5>
       <br/>
       <button onClick={handleDeleteClick}>Delete</button>
+      <br/>
+      <button onClick={handleUpdateClick}>Update</button>
     </div>
   )
 }
