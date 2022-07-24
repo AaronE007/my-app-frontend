@@ -6,7 +6,7 @@ const MealContainer = () => {
   const [meals, setMeals] = useState([])
 
   useEffect(() => {
-    fetch("Url")
+    fetch("http://localhost:9292/messages")
       .then((r) => r.json())
       .then(setMeals);
   }, []);
