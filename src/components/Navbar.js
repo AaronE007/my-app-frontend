@@ -17,10 +17,9 @@ const Navbar = () => {
   return (
     <nav>
       <Link style={style} to="/">Home</Link>
-      <Link style={style}  to="/recipes">Recipes</Link>
-      <Link style={style} to="/recipes/new">Add Recipes Form</Link>
+      <Link style={style}  to="/meals">Recipes</Link>
+      <Link style={style} to="/meals/new">Add Recipes Form</Link>
       <Link style={style}  to="/restaurants">Restaurants</Link>
-      <Link style={style} to="/restaurant/new">Add Restaurant Card Form</Link>
     </nav>
   )
 }
