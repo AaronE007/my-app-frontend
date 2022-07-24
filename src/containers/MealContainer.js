@@ -17,8 +17,6 @@ const MealContainer = () => {
   }
 
   
-  
-
 
   return (
     <div>

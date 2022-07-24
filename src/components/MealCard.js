@@ -6,8 +6,11 @@ const MealCard = ({meal, onDeleteClick, onUpdateClick}) => {
     onDeleteClick(id);
   }
 
-  function handleUpdateClick() {
-    onUpdateClick(id);
+  function handleUpdateClick(e) {
+    e.preventDefault()
+    if (e.key === 'Enter') {
+      onUpdateClick(id)
+    }
   }
 
   return (
@@ -15,6 +18,7 @@ const MealCard = ({meal, onDeleteClick, onUpdateClick}) => {
       <h3>Name: {meal.name}</h3>
       <br/>
       <h4>Calories: {meal.calories}</h4>
+      <input onKeyDown={handleUpdateClick} type="number" name="calories" />
       <br/>
       <h4>Main Ingredient: {meal.mainIngredient}</h4>
       <br/>
@@ -23,8 +27,6 @@ const MealCard = ({meal, onDeleteClick, onUpdateClick}) => {
       <h5>Eaten at: {meal.restaurant.name}</h5>
       <br/>
       <button onClick={handleDeleteClick}>Delete</button>
-      <br/>
-      <button onClick={handleUpdateClick}>Update</button>
     </div>
   )
 }
