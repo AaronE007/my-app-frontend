@@ -17,16 +17,25 @@ const MealContainer = () => {
   }
 
   function onUpdateMeal(id, correctCalories ) {
-    const updatedMeals = meal.map((meal) => {
-      if (meal.id === correctCalories.id) {
-        return correctCalories;
+    fetch(`Url${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ correctCalories }),
+    })
+      .then((r) => r.json())
+      .then((updatedMeals) => {
+        const updatedMeals = meal.map((meal) => {
+          if (meal.id === updatedMeals.id){ 
+            return updatedMeals; 
       } else {
         return meal;
       }
     });
     setMeals(updatedMeals);
-  }
-
+  })
+}
 
   
 
