@@ -3,12 +3,12 @@ import{BrowserRouter as  Route, Switch} from "react-router-dom"
 import Header from "./components/Header"
 import Home from "./components/Home"
 import Navbar from "./components/Navbar"
-import RecipeCard from "./components/RecipeCard"
-import RecipeForm from "./components/RecipeForm"
-import RecipeContainer from './containers/RecipeContainer'
+import MealCard from "./components/RecipeCard"
+import MealForm from "./components/RecipeForm"
+import MealContainer from './containers/RecipeContainer'
 import RestaurantContainer from './containers/RestaurantContainer'
 import RestaurantCard from './components/RestaurantCard';
-import RestaurantForm from './components/RestaurantForm'
+
 
 
 function App() {
@@ -17,23 +17,21 @@ function App() {
 
   return (
     <div>
+
         <Navbar />
         <Header title="Food Diary"/>
+
         <Switch>
-          <Route path="/recipes/new">
-            <RecipeForm/>
+          <Route path="/meals/new">
+            <MealForm/>
           </Route>
 
-          <Route path="/recipes/id">
-            <RecipeCard/>
+          <Route path="/meals/id">
+            <MealCard/>
           </Route>
 
-          <Route path="/recipes">
-            <RecipeContainer/>
-          </Route>
-
-          <Route path="/restaurant/new">
-            <RestaurantForm/>
+          <Route path="/meals">
+            <MealContainer/>
           </Route>
 
           <Route path="restaurant/id">
@@ -49,6 +47,7 @@ function App() {
           </Route>
 
         </Switch>
+        
     </div>
   );
 }
