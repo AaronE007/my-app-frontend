@@ -16,11 +16,24 @@ const MealContainer = () => {
       });
   }
 
+  function onUpdateMeal(id, correctCalories ) {
+    const updatedMeals = meal.map((meal) => {
+      if (meal.id === correctCalories.id) {
+        return correctCalories;
+      } else {
+        return meal;
+      }
+    });
+    setMeals(updatedMeals);
+  }
+
+
+  
 
 
   return (
     <div>
-      <MealList meals={meals} handleDeleteClick={handleDeleteClick} />
+      <MealList meals={meals} handleDeleteClick={handleDeleteClick}  onUpdateMeal={onUpdateMeal}/>
     </div>
   )
 }
