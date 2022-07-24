@@ -16,7 +16,6 @@ const MealCard = ({meal, onDeleteClick, onUpdateMeal}) => {
   }
 
 
-
   return (
     <div style={{margin: "auto", border: "solid", backgroundColor: "blue", height: 800, width: 800, color: "gold"}}>
       <h3>Name: {name}</h3>
