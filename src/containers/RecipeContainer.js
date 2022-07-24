@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import RecipeList from '../components/RecipeList';
 
 
-const RecipeContainer = () => {
+const MealContainer = () => {
   const [meals, setMeals] = useState([])
 
   useEffect(() => {
@@ -15,9 +15,9 @@ const RecipeContainer = () => {
   
   return (
     <div>
-      <RecipeList meals={meals} />
+      <MealList meals={meals} />
     </div>
   )
 }
 
-export default RecipeContainer
+export default MealContainer

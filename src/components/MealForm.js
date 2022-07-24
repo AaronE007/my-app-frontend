@@ -3,7 +3,7 @@ import {useHistory} from "react-router-dom"
 
 import React from 'react'
 
-const RecipeForm = () => {
+const MealForm = () => {
   const history = useHistory()
   const [meal, setMeal] = useState({
     name: "",
@@ -69,4 +69,4 @@ const RecipeForm = () => {
   )
 }
 
-export default RecipeForm
+export default MealForm
