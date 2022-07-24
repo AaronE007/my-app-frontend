@@ -1,11 +1,10 @@
 import React from 'react'
 import MealCard from './MealCard'
 
-const MealList = ({meals}) => {
+const MealList = ({meals, onDeleteClick, onUpdateMeal}) => {
 
-  fun
 
-  const renderMeals = meals.map(meal => <MealCard key={meals.id} meal={meal}/>)
+  const renderMeals = meals.map(meal => <MealCard key={meals.id} meal={meal} onUpdateMeal={onUpdateMeal} onDeleteClick={onDeleteClick}/>)
   return (
     <div>
       {renderMeals}

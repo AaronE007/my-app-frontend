@@ -1,8 +1,10 @@
 import React from 'react'
 
-const MealCard = ({meal}) => {
+const MealCard = ({meal, onDeleteClick}) => {
 
-
+  function handleDeleteClick() {
+    onDeleteClick(id);
+  }
 
 
   return (
