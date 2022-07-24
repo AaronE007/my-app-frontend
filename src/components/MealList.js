@@ -1,5 +1,5 @@
 import React from 'react'
-import RecipeCard from './RecipeCard'
+import MealCard from './MealCard'
 
 const MealList = ({meals}) => {
 

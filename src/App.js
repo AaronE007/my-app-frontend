@@ -3,9 +3,9 @@ import{BrowserRouter as  Route, Switch} from "react-router-dom"
 import Header from "./components/Header"
 import Home from "./components/Home"
 import Navbar from "./components/Navbar"
-import MealCard from "./components/RecipeCard"
-import MealForm from "./components/RecipeForm"
-import MealContainer from './containers/RecipeContainer'
+import MealCard from "./components/MealCard"
+import MealForm from "./components/MealForm"
+import MealContainer from './containers/MealContainer'
 import RestaurantContainer from './containers/RestaurantContainer'
 import RestaurantCard from './components/RestaurantCard';
 
