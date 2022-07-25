@@ -5,7 +5,7 @@ const RestaurantContainer = () => {
   const [restaurants, setrestaurants] = useState([])
 
   useEffect(() => {
-    fetch("Url")
+    fetch("http://localhost:9292/restaurants")
       .then((r) => r.json())
       .then(setrestaurants);
   }, []);

@@ -5,6 +5,7 @@ const MealCard = ({meal, onDeleteClick, onUpdateMeal}) => {
   const {id, name, calories, mainIngredient, countryOfOrigin} = meal
 
   function handleDeleteClick() {
+    
     onDeleteClick(id);
   }
 
@@ -18,6 +19,7 @@ const MealCard = ({meal, onDeleteClick, onUpdateMeal}) => {
 
   return (
     <div style={{margin: "auto", border: "solid", backgroundColor: "blue", height: 800, width: 800, color: "gold"}}>
+      <button onClick={handleDeleteClick}>Delete</button>
       <h3>Name: {name}</h3>
       <br/>
       <h4>Calories: {calories}</h4>
@@ -28,9 +30,7 @@ const MealCard = ({meal, onDeleteClick, onUpdateMeal}) => {
       <br/>
       <h4>Country of Origin: {countryOfOrigin}</h4>
       <br/>
-      <h5>Eaten at: {meal.restaurant.name}</h5>
-      <br/>
-      <button onClick={handleDeleteClick}>Delete</button>
+      <h4>Eaten at: {meal.restaurant?.name}</h4>
     </div>
   )
 }

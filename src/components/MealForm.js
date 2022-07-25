@@ -9,7 +9,8 @@ const MealForm = () => {
     name: "",
     calories: "",
     mainIngredient: "",
-    countryOfOrigin: ""
+    countryOfOrigin: "",
+    restaurant: ""
   })
 
   const handleChange = (e) =>{
@@ -27,7 +28,8 @@ const MealForm = () => {
       name: meal.name,
       calories: meal.calories,
       main_ingredient: meal.mainIngredient,
-      country_of_origin: meal.countryOfOrigin
+      country_of_origin: meal.countryOfOrigin,
+      restaurant: meal.restaurant
     }
 
     fetch("url", {
@@ -45,26 +47,32 @@ const MealForm = () => {
   return (
     <div>
     <h2>Add Menu Item Here</h2>
-    <form onSubmit={handleSubmit}>
-        <label>Name</label>
-        <input onChange={handleChange} type="text" name="name" value={meal.name} required/>
-        <br/>
-        <br/>
+      <form onSubmit={handleSubmit}>
+          <label>Name</label>
+          <input onChange={handleChange} type="text" name="name" value={meal.name} required/>
+          <br/>
+          <br/>
 
-        <label>Calories</label>
-        <input onChange={handleChange} type="number" name="calories" value={meal.calories} required/>
-        <br/>
-        <br/>
+          <label>Calories</label>
+          <input onChange={handleChange} type="number" name="calories" value={meal.calories} required/>
+          <br/>
+          <br/>
 
-        <label>Main Ingredient</label>
-        <input onChange={handleChange} type="text" name="mainIngredient" value={meal.mainIngredient} required/>
-        <br/>
-        <br/>
+          <label>Main Ingredient</label>
+          <input onChange={handleChange} type="text" name="mainIngredient" value={meal.mainIngredient} required/>
+          <br/>
+          <br/>
 
-        <label>Country of Origin</label>
-        <input onChange={handleChange} type="text" name="countryOfOrigin" value={meal.countryOfOrigin} required/>
-    </form>
-      
+          <label>Country of Origin</label>
+          <input onChange={handleChange} type="text" name="countryOfOrigin" value={meal.countryOfOrigin} required/>
+          <br/>
+          <br/>
+
+          <label>Restaurant</label>
+          <input onChange={handleChange} type="text" name="restaurant" value={meal.restaurant} required/>
+          <br/>
+          <input type="submit" value="Add a Meal!" />
+      </form>
     </div>
   )
 }
