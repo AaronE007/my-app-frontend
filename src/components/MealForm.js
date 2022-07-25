@@ -32,7 +32,7 @@ const MealForm = () => {
       restaurant: meal.restaurant
     }
 
-    fetch("url", {
+    fetch("http://localhost:9292/meals", {
       method: "Post",
       headers: {
         "Content_Type": "app"
