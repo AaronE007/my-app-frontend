@@ -10,22 +10,15 @@ const MealContainer = () => {
     setMeals(updatedMeals);
   }
 
-  function onUpdateMeal(id, correctedValue){
-    fetch(`http://localhost:9292/${id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ correctedValue }),
-    })
-    .then((r) => r.json())
-    .then((updatedMeal) => {
-      const updatedMeals = meals.map((meal) => {
-        if (meal.id === updatedMeal.id) return updatedMeal;
-        return meal;
-      });
-      setMeals(updatedMeals);
+  function handleUpdatemeal(updatedMeal) {
+    const updatedMeal = messages.map((message) => {
+      if (message.id === updatedMessageObj.id) {
+        return updatedMessageObj;
+      } else {
+        return message;
+      }
     });
+    setMessages(updatedMessages);
   }
 
   useEffect(() => {
