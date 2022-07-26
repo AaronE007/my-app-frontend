@@ -17,8 +17,8 @@ const Navbar = () => {
   return (
     <nav>
       <Link style={style} to="/">Home</Link>
-      <Link style={style}  to="/meals">Recipes</Link>
-      <Link style={style} to="/meals/new">Add Recipes Form</Link>
+      <Link style={style}  to="/meals">Meals</Link>
+      <Link style={style} to="/meals/new">Add Meals Form</Link>
       <Link style={style}  to="/restaurants">Restaurants</Link>
     </nav>
   )

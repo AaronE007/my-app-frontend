@@ -5,15 +5,9 @@ import MealList from '../components/MealList';
 const MealContainer = () => {
   const [meals, setMeals] = useState([])
 
-  function handleDeleteClick(id) {
-    fetch(`http://localhost:9292`, {
-      method: "DELETE",
-    })
-      .then((r) => r.json())
-      .then(() => {
-        const updatedMeals = meals.filter((meal) => meal.id !== id);
-        setMeals(updatedMeals);
-      });
+  function onDeleteClick(id) {
+    const updatedMeals = meals.filter((meal) => meal.id !== id);
+    setMeals(updatedMeals);
   }
 
   function onUpdateMeal(id, correctedValue){
@@ -44,7 +38,7 @@ const MealContainer = () => {
 
   return (
     <div>
-      <MealList meals={meals} handleDeleteClick={handleDeleteClick}  onUpdateMeal={onUpdateMeal}/>
+      <MealList meals={meals} onDeleteClick={onDeleteClick}  onUpdateMeal={onUpdateMeal}/>
     </div>
   )
 }
