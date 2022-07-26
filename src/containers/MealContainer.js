@@ -10,15 +10,15 @@ const MealContainer = () => {
     setMeals(updatedMeals);
   }
 
-  function handleUpdatemeal(updatedMeal) {
-    const updatedMeal = messages.map((message) => {
-      if (message.id === updatedMessageObj.id) {
-        return updatedMessageObj;
+  function onUpdateMeal(updatedMeal) {
+    const mealsUpdated = meals.map((meal) => {
+      if (meal.id === updatedMeal.id) {
+        return updatedMeal;
       } else {
-        return message;
+        return meal;
       }
     });
-    setMessages(updatedMessages);
+    setMeals(mealsUpdated);
   }
 
   useEffect(() => {

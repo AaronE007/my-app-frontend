@@ -4,7 +4,7 @@ import EditMeal from './EditMeal';
 
 const MealCard = ({meal, onDeleteClick, onUpdateMeal}) => {
 
-  const {id, name, calories} = meal
+  const {id} = meal
 
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -12,6 +12,7 @@ const MealCard = ({meal, onDeleteClick, onUpdateMeal}) => {
     setIsFlipped(!isFlipped);
   }
 
+ 
 
 
   function handleDeleteClick() {

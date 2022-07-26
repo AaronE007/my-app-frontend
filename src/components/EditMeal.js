@@ -50,7 +50,7 @@ function EditMeal({ id, handleUpdateMeal }) {
           <label>Restaurant</label>
           <input onChange={(e) => setMeal(e.target.value)} type="text" name="restaurant" value={meal.restaurant} required/>
           <br/>
-          <input type="submit" value="Add a Meal!" />
+          <input type="submit" value="Change Meal Data" />
    </form>
   );
 }
