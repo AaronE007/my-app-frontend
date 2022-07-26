@@ -4,7 +4,6 @@ import {useHistory} from "react-router-dom"
 import React from 'react'
 
 const MealForm = () => {
-  const history = useHistory()
   const [meal, setMeal] = useState({
     name: "",
     calories: "",
@@ -12,6 +11,8 @@ const MealForm = () => {
     countryOfOrigin: "",
     restaurant: ""
   })
+
+  const history = useHistory()
 
   const handleChange = (e) =>{
     setMeal({
@@ -33,9 +34,9 @@ const MealForm = () => {
     }
 
     fetch("http://localhost:9292/meals", {
-      method: "Post",
+      method: "POST",
       headers: {
-        "Content_Type": "app"
+        "Content_Type": "application/json",
       },
         body: JSON.stringify(newMeal)
     })
@@ -47,7 +48,7 @@ const MealForm = () => {
   return (
     <div>
     <h2>Add Menu Item Here</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{margin: "auto", border: "solid", backgroundColor: "blue", height: 400, width: 400, color: "gold"}}>
           <label>Name</label>
           <input onChange={handleChange} type="text" name="name" value={meal.name} required/>
           <br/>

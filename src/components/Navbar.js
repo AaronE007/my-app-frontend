@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const style = {
   width: "100%",
-  magrin:"25px 100px 25px",
+  magrin:"auto",
   padding: "1em",
   color: "black",
   backgroundColor: "Gold",
