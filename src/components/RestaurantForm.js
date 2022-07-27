@@ -49,6 +49,8 @@ const RestaurantForm = () => {
           <label>Slogan</label>
           <input onChange={handleChange} type="text" name="slogan" value={restaurant.slogan} required/>
           <br/>
+          <br/>
+          <input type="submit" value="Add Restaurant!" />
       </form>
     </div>
   )
