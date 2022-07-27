@@ -28,7 +28,6 @@ const MealContainer = () => {
   }, []);
       
 
-
   return (
     <div>
       <MealList meals={meals} onDeleteClick={onDeleteClick}  onUpdateMeal={onUpdateMeal}/>
