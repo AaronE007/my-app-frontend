@@ -8,6 +8,7 @@ import MealForm from "./components/MealForm"
 import MealContainer from './containers/MealContainer'
 import RestaurantContainer from './containers/RestaurantContainer'
 import RestaurantCard from './components/RestaurantCard';
+import RestaurantForm from './components/RestaurantForm';
 
 
 
@@ -40,6 +41,10 @@ function App() {
 
           <Route path="/restaurants">
             <RestaurantContainer/>
+          </Route>
+
+          <Route path="/restaurants/new">
+            <RestaurantForm/>
           </Route>
 
           <Route path="/">

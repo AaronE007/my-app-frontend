@@ -2,20 +2,17 @@ import {useState} from "react"
 import {useHistory} from "react-router-dom"
 import React from 'react'
 
-const MealForm = () => {
-  const [meal, setMeal] = useState({
+const RestaurantForm = () => {
+  const [restaurant, setRestaurant] = useState({
     name: "",
-    calories: "",
-    mainIngredient: "",
-    countryOfOrigin: "",
-    restaurant: ""
+    slogan: "",
   })
 
   const history = useHistory()
 
   const handleChange = (e) =>{
-    setMeal({
-      ...meal, 
+    setRestaurant({
+      ...restaurant, 
       [e.target.name]: e.target.value
     })
 
@@ -24,57 +21,37 @@ const MealForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    const newMeal = {
-      name: meal.name,
-      calories: meal.calories,
-      main_ingredient: meal.mainIngredient,
-      country_of_origin: meal.countryOfOrigin,
-      restaurant: meal.restaurant
+    const newRestaurant = {
+      name: restaurant.name,
+      slogan: restaurant.slogan,
     }
 
-    fetch("http://localhost:9292/meals", {
+    fetch("http://localhost:9292/restaurants", {
       method: "POST",
       headers: {
         "Content_Type": "application/json",
       },
-        body: JSON.stringify(newMeal)
+        body: JSON.stringify(newRestaurant)
     })
-      .then(() => history.push("/meals"))
+      .then(() => history.push("/restaurants"))
   }
 
 
 
   return (
     <div>
-    <h2>Add Menu Item Here</h2>
-      <form onSubmit={handleSubmit} style={{margin: "auto", border: "solid", backgroundColor: "blue", height: 400, width: 400, color: "gold"}}>
+    <h2>Add Restaurant Here</h2>
+      <form onSubmit={handleSubmit} style={{margin: "auto", border: "solid", backgroundColor: "blue", height: 300, width: 400, color: "gold"}}>
           <label>Name</label>
-          <input onChange={handleChange} type="text" name="name" value={meal.name} required/>
+          <input onChange={handleChange} type="text" name="name" value={restaurant.name} required/>
           <br/>
           <br/>
-
-          <label>Calories</label>
-          <input onChange={handleChange} type="number" name="calories" value={meal.calories} required/>
+          <label>Slogan</label>
+          <input onChange={handleChange} type="text" name="slogan" value={restaurant.slogan} required/>
           <br/>
-          <br/>
-
-          <label>Main Ingredient</label>
-          <input onChange={handleChange} type="text" name="mainIngredient" value={meal.mainIngredient} required/>
-          <br/>
-          <br/>
-
-          <label>Country of Origin</label>
-          <input onChange={handleChange} type="text" name="countryOfOrigin" value={meal.countryOfOrigin} required/>
-          <br/>
-          <br/>
-
-          <label>Restaurant</label>
-          <input onChange={handleChange} type="text" name="restaurant" value={meal.restaurant} required/>
-          <br/>
-          <input type="submit" value="Add a Meal!" />
       </form>
     </div>
   )
 }
 
-export default MealForm
+export default RestaurantForm
